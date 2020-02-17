@@ -15,7 +15,7 @@ def process_image(
             .convert("RGBA"))
 
         src[mask[..., -1] == 0] = [255, 255, 255, 0]
-        Image.fromarray(src).save('data/result.png')
+        Image.fromarray(src).save(output_path)
         print("Created File: " + output_path)
     except:
         print("Unexpected error:", sys.exc_info()[0])
