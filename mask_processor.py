@@ -1,3 +1,4 @@
+import argparse
 import sys
 import numpy as np
 from PIL import Image
@@ -23,6 +24,8 @@ def process_image(
         raise
 
 def main():
+    main_arg_parser = argparse.ArgumentParser(description="The script to crop the area two images intersect")
+    main_arg_parser.parse_args()
     process_image()
 
 if __name__ == "__main__":
